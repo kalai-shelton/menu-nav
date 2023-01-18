@@ -1,0 +1,27 @@
+export default [
+    {
+        "id":1,
+        "name":"Dashboard",
+        "route":"/dashboard"
+    },
+    {
+        "id":2,
+        "name":"Services",
+        "route":"/dashboard"
+    },
+    {
+        "id":3,
+        "name":"Settings",
+        "route":"/dashboard"
+    },
+    {
+        "id":4,
+        "name":"Contact",
+        "route":"/dashboard"
+    },
+    {
+        "id":5,
+        "name":"AboutUs",
+        "route":"/dashboard"
+    },
+]
