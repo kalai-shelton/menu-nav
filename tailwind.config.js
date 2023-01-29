@@ -10,6 +10,13 @@ module.exports = {
       backgroundImage: {
         //'hero-pattern': "linear-gradient(to right bottom, rgba('#7ed56f',0.8), rgba('#28b485',0.8)), url('/sampleImages/wall5.webp')",
      },
+     height: {
+      "100vh":"100vh",
+     "95vh": "95vh",
+     "90vh": "90vh",
+     "60vh":"60vh",
+     "70vh":"70vh"
+     }
     },
   },
   plugins: [],

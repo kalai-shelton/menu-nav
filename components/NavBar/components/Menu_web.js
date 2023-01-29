@@ -3,13 +3,13 @@ import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Menu_mob } from './Menu_mob'
 
-const Menu_web = ({ menuItems }) => {
+export const Menu_web = ({ menuItems }) => {
   const [showMenu, setShowMenu] = useState(false)
   const { asPath } = useRouter();
   const router = useRouter();
   const Page = asPath == '/' ? 'home-page' : '';
   return (
-    <div className='fixed w-screen'>
+    <div className='fixed w-screen z-50'>
       <div className={`w-full flex justify-center ${Page == 'home-page' ? "bg-[#CD853F] bg-opacity-30 md:bg-gray-200 md:bg-opacity-10" : "bg-amber-800"} relative shadow-lg`}>
         <div className='container flex p-5 justify-between items-center'>
           <div className='w-1/4'>
@@ -43,4 +43,3 @@ const Menu_web = ({ menuItems }) => {
   )
 }
 
-export default Menu_web

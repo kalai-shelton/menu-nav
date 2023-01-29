@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import React,{useState} from 'react'
+import { Hero_bg } from '../components/Home_hero/components/Hero_bg';
 
 export default function Home() {
-  
-
   return (
-    <div class="w-full h-screen bg-[url('/sampleImages/wall5-mob.jpg')] md:bg-[url('/sampleImages/wall5-tab.jpg')] lg:bg-[url('/sampleImages/wall5.webp')] bg-cover bg-center">
-      
-    </div>
+   <div className=''>
+    {/* //type cane be - "image" / "slider" */}
+   <Hero_bg type="slider"/> 
+   </div>
   )
 }
 
