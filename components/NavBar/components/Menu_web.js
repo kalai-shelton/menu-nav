@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Menu_mob } from './Menu_mob'
 
 export const Menu_web = ({ menuItems }) => {
@@ -8,10 +8,22 @@ export const Menu_web = ({ menuItems }) => {
   const { asPath } = useRouter();
   const router = useRouter();
   const Page = asPath == '/' ? 'home-page' : '';
+
+  const [sizeChange, setsizechange] = useState(false);
+  const changeNavbarSize = () => {
+    if (window.scrollY >= 100) {
+      setsizechange(true);
+    } else {
+      setsizechange(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbarSize);
+  }, []);
   return (
     <div className='fixed w-screen z-50'>
-      <div className={`w-full flex justify-center ${Page == 'home-page' ? "bg-[#CD853F] bg-opacity-30 md:bg-gray-200 md:bg-opacity-10" : "bg-amber-800"} relative shadow-lg`}>
-        <div className='container flex p-5 justify-between items-center'>
+      <div className={`w-full flex justify-center ${Page == 'home-page' && !sizeChange ? "bg-[#CD853F] bg-opacity-30 md:bg-gray-200 md:bg-opacity-10" : "bg-amber-800"} relative shadow-lg`}>
+        <div className='container flex py-5 justify-between items-center px-5 lg:px-0'>
           <div className='w-1/4'>
             <div className='w-32  text-5xl font-bold text-transparent  bg-clip-text bg-gradient-to-r from-amber-800 to-white cursor-pointer' onClick={() => { router.push("/") }}>LOGO</div>
           </div>
