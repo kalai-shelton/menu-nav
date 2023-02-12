@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
-import contentData from '../data/content'
 
-export const Content_section = () => {
+
+export const Content_section = ({contentData}) => {
   return (
     <div className='h-auto container mx-auto my-8 px-5'>
       {contentData?.map((ct) =>

@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
-import footerdata from '../data/footerLinks_data'
+
 // import {MdFacebook} from 'react-icons/md'
 
 
-export const Footer = ({ bgColor }) => {
+export const Footer = ({ bgColor,footerdata }) => {
     return (
         <div className={`h-auto ${bgColor} `}>
             <div className='container mx-auto  px-5 lg:px-0 text-white'>

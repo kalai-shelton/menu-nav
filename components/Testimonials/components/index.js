@@ -1,8 +1,8 @@
 import React from 'react'
 import { ImageCard } from './ImageCard'
-import testData from '../data/Testimonial_data'
 
-export const Testimonials = () => {
+
+export const Testimonials = ({testData}) => {
   return (
     <div className='bg-[#EADDCA] pb-8 pt-24'>
     <div className='flex gap-x-5 container mx-auto overflow-auto overflow-x-scroll scrollbar-hide px-5 lg:px-0 '>

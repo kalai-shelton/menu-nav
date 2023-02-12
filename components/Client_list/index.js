@@ -1,7 +1,7 @@
 import React from 'react'
-import clientData from './data/client_data'
 
-export const Client_List = () => {
+
+export const Client_List = ({clientData}) => {
     return (
         <div className='my-8'>
             <div className=' py-5 '>
